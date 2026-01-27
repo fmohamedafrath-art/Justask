@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JustAsk | Architectural Design Services in Trincomalee</title>
+    <meta name="description"
+        content="JustAsk provides premium architectural design, 2D/3D drawing, structural design, and BIM services in Trincomalee. Professional architectural solutions for residential and commercial projects.">
+    <meta name="keywords"
+        content="architecture, architectural design, 2D drawing, 3D drawing, BIM, structural design, interior design, construction drawings, Sri Lanka architecture, Trincomalee architects">
+    <meta name="author" content="JustAsk Architecture">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://justaskarchitecture.com/">
+    <meta property="og:title" content="JustAsk | Professional Architectural Services">
+    <meta property="og:description"
+        content="Premium architectural design and drafting services in Trincomalee, Sri Lanka. Specializing in residential and commercial projects with 2D/3D drawings, BIM, and structural design.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://justaskarchitecture.com/">
+    <meta property="twitter:title" content="JustAsk | Professional Architectural Services">
+    <meta property="twitter:description"
+        content="Premium architectural design and drafting services in Trincomalee, Sri Lanka. Specializing in residential and commercial projects with 2D/3D drawings, BIM, and structural design.">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Lightbox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
+    <style>
+        :root {
+            --primary: #2C3E50;
+            --secondary: #E74C3C;
+            --accent: #3498DB;
+            --light: #F8F9FA;
+            --dark: #1A252F;
+            --gray: #7F8C8D;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+            background-color: var(--light);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            transition: var(--transition);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar.scrolled {
+            padding: 10px 0;
+            background-color: rgba(255, 255, 255, 0.98);
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .navbar-brand span {
+            color: var(--secondary);
+        }
+
+        .navbar-brand img {
+            border-radius: 8px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--dark) !important;
+            margin: 0 8px;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--secondary) !important;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            padding: 10px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 180px 0 100px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, #E74C3C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .hero-stats {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--secondary);
+        }
+
+        .stat-text {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* About Section */
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 20px auto 0;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .experience-badge {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background: var(--secondary);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .experience-badge .years {
+            display: block;
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        .about-features {
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .feature-icon {
+            background: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        /* Services Section */
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            margin-bottom: 30px;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+
+        .service-content {
+            padding: 25px;
+        }
+
+        .service-content h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin: 15px 0;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .service-features li {
+            padding: 5px 0;
+            color: var(--gray);
+        }
+
+        .service-features i {
+            color: var(--secondary);
+            margin-right: 10px;
+        }
+
+        /* Process Section */
+        .process-step {
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            transition: var(--transition);
+        }
+
+        .process-step:hover {
+            transform: translateY(-10px);
+        }
+
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: var(--secondary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+        }
+
+        /* Portfolio Section */
+        .portfolio-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .filter-btn {
+            background: white;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            padding: 8px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .portfolio-item {
+            position: relative;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .portfolio-img {
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .portfolio-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover .portfolio-img img {
+            transform: scale(1.1);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 30px;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+
+        /* Team Section */
+        .team-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            margin-bottom: 30px;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-img {
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .team-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .team-card:hover .team-img img {
+            transform: scale(1.1);
+        }
+
+        .team-info {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .team-info h4 {
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .team-info p {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .team-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .team-social a {
+            width: 35px;
+            height: 35px;
+            background: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .team-social a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Contact Section */
+        .contact-info {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-control {
+            padding: 12px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.25rem rgba(44, 62, 80, 0.25);
+        }
+
+        /* Footer */
+        .footer-section {
+            background: var(--dark);
+            color: white;
+            padding: 80px 0 20px;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo span {
+            color: var(--secondary);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        .footer-links h4 {
+            color: white;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-links h4::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background: var(--secondary);
+            bottom: 0;
+            left: 0;
+            border-radius: 2px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .newsletter-form input::placeholder {
+            color: #bbb;
+        }
+
+        .newsletter-form button {
+            background: var(--secondary);
+            border: none;
+            color: white;
+            width: 50px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            background: var(--primary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 1000;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        /* Floating Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            z-index: 1000;
+        }
+
+        .float-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 15px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .float-whatsapp {
+            background: #25D366;
+        }
+
+        .float-btn:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            background: var(--light);
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-right: 15px;
+        }
+
+        .theme-toggle:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-padding {
+                padding: 70px 0;
+            }
+
+            .floating-buttons {
+                bottom: 80px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-stats {
+                padding: 20px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .contact-form {
+                padding: 20px;
+            }
+
+            .portfolio-filter {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .filter-btn {
+                width: 200px;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-section {
+                padding: 150px 0 80px;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .team-img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="img/picture (7).jpeg" alt="JustAsk Architecture" class="me-2" style="max-height: 40px;">
+                <span>Just</span>Ask
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <button id="themeToggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="#contact" class="btn btn-primary ms-lg-3">Get Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== Hero Section ===== -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="hero-content">
+                        <h1 data-aos="fade-down">Transform Your Vision Into Reality</h1>
+                        <p data-aos="fade-up" data-aos-delay="200">Professional architectural design and drafting
+                            services for residential and commercial projects.
+                            <br>2D & 3D Drawing • Council Drawings • Interior Design • Structural Design
+                        </p>
+                        <div class="hero-btns" data-aos="fade-up" data-aos-delay="400">
+                            <a href="#services" class="btn btn-primary me-3">Our Services</a>
+                            <a href="#portfolio" class="btn btn-secondary">View Projects</a>
+                        </div>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="row">
+                            <div class="col-md-3 col-6">
+                                <div class="stat-item">
+                                    <span class="stat-number">150</span>
+                                    <span class="stat-text">Projects Completed</span>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="stat-item">
+                                    <span class="stat-number">85</span>
+                                    <span class="stat-text">Happy Clients</span>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="stat-item">
+                                    <span class="stat-number">12</span>
+                                    <span class="stat-text">Years Experience</span>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="stat-item">
+                                    <span class="stat-number">25</span>
+                                    <span class="stat-text">Awards Won</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== About Section ===== -->
+    <section id="about" class="about-section section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="about-image">
+                        <img src="img/picture (7).jpeg" alt="About JustAsk Architecture">
+                        <div class="experience-badge">
+                            <span class="years">2</span>
+                            <span class="text">Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="section-title mb-4 text-lg-start">
+                        <h2>About JustAsk Architecture</h2>
+                    </div>
+                    <p>JustAsk Architecture is a premier architectural design firm with over 12 years of experience
+                        providing innovative design solutions for residential and commercial projects in Trincomalee and
+                        across Sri Lanka.</p>
+                    <p>Our team of skilled architects and designers combines technical expertise with creative vision to
+                        deliver exceptional architectural services that exceed client expectations. We believe in
+                        building long-term relationships by providing reliable, innovative design solutions.</p>
+
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div>
+                                <h5>Quality Assurance</h5>
+                                <p>We use premium design tools and follow international standards to ensure the highest
+                                    quality architectural drawings.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <div>
+                                <h5>Timely Delivery</h5>
+                                <p>We understand construction deadlines and ensure timely delivery without compromising
+                                    on quality.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div>
+                                <h5>24/7 Support</h5>
+                                <p>Our technical support team is always ready to assist you with any queries or
+                                    concerns.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Services Section ===== -->
+    <section id="services" class="services-section section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Architectural Services</h2>
+                <p>Comprehensive design solutions for all your architectural needs</p>
+            </div>
+
+            <div class="row">
+                <!-- Service 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=800&q=80"
+                                alt="2D & 3D Drawing">
+                        </div>
+                        <div class="service-content">
+                            <h3>2D & 3D Architectural Drawings</h3>
+                            <p>Detailed floor plans, elevations, sections, and photorealistic 3D visualizations for your
+                                projects.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Detailed Floor Plans</li>
+                                <li><i class="fas fa-check"></i> Elevations & Sections</li>
+                                <li><i class="fas fa-check"></i> 3D Modeling</li>
+                                <li><i class="fas fa-check"></i> Photorealistic Rendering</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary w-100">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?auto=format&fit=crop&w=800&q=80"
+                                alt="Interior Design">
+                        </div>
+                        <div class="service-content">
+                            <h3>Interior Design & Planning</h3>
+                            <p>Complete interior design solutions with space planning, material selection, and lighting
+                                design.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Space Planning</li>
+                                <li><i class="fas fa-check"></i> Material Selection</li>
+                                <li><i class="fas fa-check"></i> Lighting Design</li>
+                                <li><i class="fas fa-check"></i> Furniture Layout</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary w-100">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
+                                alt="Structural Design">
+                        </div>
+                        <div class="service-content">
+                            <h3>Structural Design & Analysis</h3>
+                            <p>Professional structural engineering services for residential and commercial buildings.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Structural Calculations</li>
+                                <li><i class="fas fa-check"></i> Foundation Design</li>
+                                <li><i class="fas fa-check"></i> Steel & Concrete Design</li>
+                                <li><i class="fas fa-check"></i> Seismic Analysis</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary w-100">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Process Section ===== -->
+    <section id="process" class="process-section section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Design Process</h2>
+                <p>How we transform your ideas into architectural reality</p>
+            </div>
+
+            <div class="row">
+                <!-- Step 1 -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-file-invoice"></i>
+                        </div>
+                        <div class="step-number">1</div>
+                        <h4>Consultation & Brief</h4>
+                        <p>Understand your requirements, site conditions, and design preferences.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="step-number">2</div>
+                        <h4>Concept Design</h4>
+                        <p>Develop preliminary concepts and 3D visualizations for review.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <div class="step-number">3</div>
+                        <h4>Detailed Design</h4>
+                        <p>Create detailed construction drawings and technical specifications.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-file-certificate"></i>
+                        </div>
+                        <div class="step-number">4</div>
+                        <h4>Approval & Construction</h4>
+                        <p>Submit for council approval and provide construction supervision.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Portfolio Section ===== -->
+    <section id="portfolio" class="portfolio-section section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Projects</h2>
+                <p>See some of our recent architectural projects and designs</p>
+            </div>
+
+            <div class="portfolio-filter" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="interior">Interior Design</button>
+            </div>
+
+            <div class="row portfolio-grid">
+                <!-- Portfolio Item 1 -->
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="residential" data-aos="zoom-in"
+                    data-aos-delay="100">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80"
+                            alt="Modern Villa Design">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h4>Modern Villa Design</h4>
+                        <p>Contemporary residential villa with pool and garden</p>
+                        <a href="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80"
+                            data-lightbox="portfolio" class="btn btn-secondary mt-3">View Larger</a>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="commercial" data-aos="zoom-in"
+                    data-aos-delay="200">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1487956382158-bb926046304a?auto=format&fit=crop&w=800&q=80"
+                            alt="Office Building">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h4>Commercial Office Building</h4>
+                        <p>Three-story office building with glass facade</p>
+                        <a href="https://images.unsplash.com/photo-1487956382158-bb926046304a?auto=format&fit=crop&w=800&q=80"
+                            data-lightbox="portfolio" class="btn btn-secondary mt-3">View Larger</a>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="interior" data-aos="zoom-in"
+                    data-aos-delay="300">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=800&q=80"
+                            alt="Luxury Apartment Interior">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h4>Luxury Apartment Interior</h4>
+                        <p>Modern interior design for high-end apartment</p>
+                        <a href="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=800&q=80"
+                            data-lightbox="portfolio" class="btn btn-secondary mt-3">View Larger</a>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4 -->
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="residential" data-aos="zoom-in"
+                    data-aos-delay="400">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+                            alt="Traditional House">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h4>Traditional Sri Lankan House</h4>
+                        <p>Modern interpretation of traditional architecture</p>
+                        <a href="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+                            data-lightbox="portfolio" class="btn btn-secondary mt-3">View Larger</a>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 -->
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="commercial" data-aos="zoom-in"
+                    data-aos-delay="500">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80"
+                            alt="Shopping Complex">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h4>Shopping Complex Design</h4>
+                        <p>Multi-retail complex with parking facilities</p>
+                        <a href="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80"
+                            data-lightbox="portfolio" class="btn btn-secondary mt-3">View Larger</a>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6 -->
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="interior" data-aos="zoom-in"
+                    data-aos-delay="600">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1553444836-bc6c8d340ba7?auto=format&fit=crop&w=800&q=80"
+                            alt="Restaurant Interior">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h4>Fine Dining Restaurant</h4>
+                        <p>Complete interior design for premium restaurant</p>
+                        <a href="https://images.unsplash.com/photo-1553444836-bc6c8d340ba7?auto=format&fit=crop&w=800&q=80"
+                            data-lightbox="portfolio" class="btn btn-secondary mt-3">View Larger</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Testimonials Section ===== -->
+    <section id="testimonials" class="testimonials-section section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Client Testimonials</h2>
+                <p>What our clients say about our architectural services</p>
+            </div>
+
+            <div class="owl-carousel testimonial-slider" data-aos="fade-up">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "JustAsk Architecture exceeded our expectations with their modern villa design. The 3D
+                        visualizations helped us visualize the final product perfectly. Highly recommended for any
+                        residential project!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
+                        </div>
+                        <div class="author-info">
+                            <h5>Michael Rodriguez</h5>
+                            <p>Home Owner, Trincomalee</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "We've been working with JustAsk for our commercial projects for over 3 years. Their attention
+                        to detail, technical expertise, and professional approach make them our preferred architectural
+                        firm."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
+                        </div>
+                        <div class="author-info">
+                            <h5>Sarah Johnson</h5>
+                            <p>Property Developer, Colombo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "The interior design for our restaurant came out beautifully. The team was professional,
+                        responsive, and helped us with material selection. We'll definitely be using their services for
+                        our next project."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Client">
+                        </div>
+                        <div class="author-info">
+                            <h5>David Chen</h5>
+                            <p>Restaurant Owner, Kandy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Team Section ===== -->
+    <section id="team" class="team-section section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Expert Team</h2>
+                <p>Meet the professionals behind JustAsk Architecture</p>
+            </div>
+
+            <div class="row">
+                <!-- Team Member 1 -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-card">
+                        <div class="team-img">
+                            <img src="img/picture (1).jpeg" alt="Mohamed Saththir">
+                        </div>
+                        <div class="team-info">
+                            <h4>Mohamed Saththir</h4>
+                            <p>CEO & Principal Architect</p>
+                            <p class="small">HND Civil Engineering • AutoCAD • BIM</p>
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-card">
+                        <div class="team-img">
+                            <img src="img/picture (8).jpeg" alt="M.M.Rilan Ahamed">
+                        </div>
+                        <div class="team-info">
+                            <h4>M.M.Rilan Ahamed</h4>
+                            <p>Technical Officer</p>
+                            <p class="small">Engineering Draughtsman • Quantity Surveying</p>
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-card">
+                        <div class="team-img">
+                            <img src="img/picture (9).jpeg" alt="M.H.M.Musthak">
+                        </div>
+                        <div class="team-info">
+                            <h4>M.H.M.Musthak</h4>
+                            <p>Engineering Draughtsman</p>
+                            <p class="small">Structural Drawing • CAD Specialist</p>
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="team-card">
+                        <div class="team-img">
+                            <img src="img/picture (10).jpeg" alt="M.S.Luthfi Ahamed">
+                        </div>
+                        <div class="team-info">
+                            <h4>M.S.Luthfi Ahamed</h4>
+                            <p>3D Modeler & Architectural Draughtsman</p>
+                            <p class="small">HND Quantity Surveying • 3D Visualization</p>
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 5 -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="team-card">
+                        <div class="team-img">
+                            <img src="img/picture 11.jpeg" alt="M.N.M.Ifthisam">
+                        </div>
+                        <div class="team-info">
+                            <h4>M.N.M.Ifthisam</h4>
+                            <p>3D Modeler</p>
+                            <p class="small">Dip in Revit architecture • Dip in SketchUp • Dip in lumion • HND in
+                                Quantity surveying</p>
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Contact Section ===== -->
+    <section id="contact" class="contact-section section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Get In Touch</h2>
+                <p>Contact us for architectural consultations or project inquiries</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Our Location</h5>
+                                <p>No-14, Front of Girls School<br>Kinniya-06, Sri Lanka</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Phone Number</h5>
+                                <p>+94 753317140<br>+94 742085894</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Email Address</h5>
+                                <p>mhd.saththir@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Working Hours</h5>
+                                <p>Monday - Friday: 8:00 AM - 8:00 PM<br>Saturday: 9:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name"
+                                        aria-label="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email"
+                                        aria-label="Your Email" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="tel" class="form-control" placeholder="Phone Number"
+                                        aria-label="Phone Number">
+                                </div>
+                                <div class="col-md-6">
+                                    <select class="form-control" aria-label="Select Service" required>
+                                        <option value="">Select Service</option>
+                                        <option>2D & 3D Drawing</option>
+                                        <option>Council Drawings</option>
+                                        <option>Interior Designing</option>
+                                        <option>Charted Engineering Services</option>
+                                        <option>Civil Advisory Services</option>
+                                        <option>Building Information Modeling (BIM)</option>
+                                        <option>Structural Design</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <input type="text" class="form-control" placeholder="Project Title"
+                                        aria-label="Project Title">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <textarea class="form-control" placeholder="Your Project Details" rows="5"
+                                        aria-label="Your Message" required></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Map Integration -->
+            <div class="row mt-5" data-aos="fade-up">
+                <div class="col-12">
+                    <div class="map-container"
+                        style="border-radius: 15px; overflow: hidden; box-shadow: var(--shadow);">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.670603774883!2d81.18225187490074!3d8.493507654789322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMjknMzYuNiJOIDgxwrAxMCc1Ni4xIkU!5e0!3m2!1sen!2slk!4v1700000000000!5m2!1sen!2slk"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-about">
+                        <a href="#" class="footer-logo"><span>Just</span>Ask</a>
+                        <p>Providing premium architectural design services in Trincomalee since 2010. We combine
+                            cutting-edge technology with creative vision to deliver exceptional design solutions.</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#portfolio">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><a href="#services">2D & 3D Drawing</a></li>
+                            <li><a href="#services">Council Drawings</a></li>
+                            <li><a href="#services">Interior Designing</a></li>
+                            <li><a href="#services">Structural Design</a></li>
+                            <li><a href="#services">BIM Services</a></li>
+                            <li><a href="#services">Civil Advisory</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-newsletter">
+                        <h4>Newsletter</h4>
+                        <p>Subscribe to receive updates on new services and architectural insights.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your Email" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                        <p class="small">We respect your privacy. Unsubscribe at any time.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> JustAsk Architecture. All Rights Reserved. |
+                    Designed with <i class="fas fa-heart" style="color: #E74C3C;"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/94753317140" target="_blank" class="float-btn float-whatsapp" title="WhatsApp Us">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- ===== JavaScript Libraries ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/counterup/1.0.0/jquery.counterup.min.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Navbar scroll effect
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('.navbar').addClass('scrolled');
+            } else {
+                $('.navbar').removeClass('scrolled');
+            }
+        });
+
+        // Back to top button
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 300) {
+                $('.back-to-top').addClass('active');
+            } else {
+                $('.back-to-top').removeClass('active');
+            }
+        });
+
+        // Portfolio filtering
+        $(document).ready(function () {
+            $('.filter-btn').click(function () {
+                $('.filter-btn').removeClass('active');
+                $(this).addClass('active');
+
+                var filter = $(this).data('filter');
+
+                if (filter === 'all') {
+                    $('.portfolio-item').fadeIn(300);
+                } else {
+                    $('.portfolio-item').each(function () {
+                        if ($(this).data('category') === filter) {
+                            $(this).fadeIn(300);
+                        } else {
+                            $(this).fadeOut(300);
+                        }
+                    });
+                }
+            });
+        });
+
+        // Testimonial slider
+        $(document).ready(function () {
+            $('.testimonial-slider').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: false,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    992: {
+                        items: 3
+                    }
+                }
+            });
+        });
+
+        // Partner slider
+        $(document).ready(function () {
+            $('.partner-slider').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: false,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    576: {
+                        items: 3
+                    },
+                    768: {
+                        items: 4
+                    },
+                    992: {
+                        items: 6
+                    }
+                }
+            });
+        });
+
+        // Counter animation
+        $(document).ready(function () {
+            $('.stat-number').counterUp({
+                delay: 10,
+                time: 2000
+            });
+        });
+
+        // Contact form submission
+        $(document).ready(function () {
+            $('#contactForm').submit(function (e) {
+                e.preventDefault();
+                alert('Thank you for your message! We will contact you soon.');
+                this.reset();
+            });
+        });
+
+        // Newsletter form
+        $(document).ready(function () {
+            $('.newsletter-form').submit(function (e) {
+                e.preventDefault();
+                alert('Thank you for subscribing to our newsletter!');
+                this.reset();
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Smooth scrolling for anchor links
+        $(document).ready(function () {
+            $('a[href*="#"]').on('click', function (e) {
+                if (this.hash !== '') {
+                    e.preventDefault();
+
+                    const hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top - 80
+                    }, 800);
+                }
+            });
+        });
+
+        // Lightbox initialization
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true
+        });
+
+        // Theme toggle functionality
+        $(document).ready(function () {
+            $('#themeToggle').click(function () {
+                $('body').toggleClass('dark-mode');
+                const icon = $(this).find('i');
+                if ($('body').hasClass('dark-mode')) {
+                    icon.removeClass('fa-moon').addClass('fa-sun');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    icon.removeClass('fa-sun').addClass('fa-moon');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+
+            // Check for saved theme preference
+            if (localStorage.getItem('theme') === 'dark') {
+                $('body').addClass('dark-mode');
+                $('#themeToggle i').removeClass('fa-moon').addClass('fa-sun');
+            }
+        });
+
+        // Dark mode styles
+        $(document).ready(function () {
+            const darkModeStyles = `
+                body.dark-mode {
+                    background-color: #121212;
+                    color: #e0e0e0;
+                }
+                
+                body.dark-mode .navbar {
+                    background-color: rgba(26, 26, 26, 0.95);
+                }
+                
+                body.dark-mode .section-title h2,
+                body.dark-mode .nav-link,
+                body.dark-mode .navbar-brand {
+                    color: #e0e0e0 !important;
+                }
+                
+                body.dark-mode .service-card,
+                body.dark-mode .process-step,
+                body.dark-mode .team-card,
+                body.dark-mode .contact-info,
+                body.dark-mode .contact-form {
+                    background-color: #1e1e1e;
+                    color: #e0e0e0;
+                }
+                
+                body.dark-mode .btn-secondary {
+                    border-color: #e0e0e0;
+                    color: #e0e0e0;
+                }
+                
+                body.dark-mode .btn-secondary:hover {
+                    background-color: #e0e0e0;
+                    color: #121212;
+                }
+                
+                body.dark-mode .footer-section {
+                    background-color: #0a0a0a;
+                }
+            `;
+
+            const styleSheet = document.createElement('style');
+            styleSheet.textContent = darkModeStyles;
+            document.head.appendChild(styleSheet);
+        });
+    </script>
+</body>
+
+</html>

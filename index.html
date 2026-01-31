@@ -4,24 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JustAsk | Architectural Design Services in Trincomalee</title>
+    <title>JustAsk | Premium Architectural Design Services</title>
     <meta name="description"
         content="JustAsk provides premium architectural design, 2D/3D drawing, structural design, and BIM services in Trincomalee. Professional architectural solutions for residential and commercial projects.">
     <meta name="keywords"
-        content="architecture, architectural design, 2D drawing, 3D drawing, BIM, structural design, interior design, construction drawings, Sri Lanka architecture, Trincomalee architects">
+        content="luxury architecture, architectural design, 2D drawing, 3D drawing, BIM, structural design, interior design, construction drawings, Sri Lanka architecture, Trincomalee architects">
     <meta name="author" content="JustAsk Architecture">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://justaskarchitecture.com/">
-    <meta property="og:title" content="JustAsk | Professional Architectural Services">
+    <meta property="og:title" content="JustAsk | Premium Architectural Services">
     <meta property="og:description"
         content="Premium architectural design and drafting services in Trincomalee, Sri Lanka. Specializing in residential and commercial projects with 2D/3D drawings, BIM, and structural design.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://justaskarchitecture.com/">
-    <meta property="twitter:title" content="JustAsk | Professional Architectural Services">
+    <meta property="twitter:title" content="JustAsk | Premium Architectural Services">
     <meta property="twitter:description"
         content="Premium architectural design and drafting services in Trincomalee, Sri Lanka. Specializing in residential and commercial projects with 2D/3D drawings, BIM, and structural design.">
 
@@ -33,7 +33,7 @@
 
     <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Owl Carousel -->
@@ -49,14 +49,20 @@
 
     <style>
         :root {
-            --primary: #2C3E50;
-            --secondary: #E74C3C;
-            --accent: #3498DB;
-            --light: #F8F9FA;
-            --dark: #1A252F;
-            --gray: #7F8C8D;
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
+            --primary: #1A1A2E;
+            --secondary: #FF3B30;
+            --accent: #0F3460;
+            --light: #F8F5F0;
+            --dark: #16213E;
+            --apple-red: #FF3B30;
+            --apple-red-dark: #D70015;
+            --apple-red-light: #FF6257;
+            --silver: #F2F2F7;
+            --shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --gradient: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
+            --apple-red-gradient: linear-gradient(135deg, #FF3B30 0%, #D70015 100%);
+            --apple-red-subtle: linear-gradient(135deg, #FF3B30 10%, #FF6257 100%);
         }
 
         body {
@@ -64,6 +70,7 @@
             color: #333;
             overflow-x: hidden;
             background-color: var(--light);
+            line-height: 1.8;
         }
 
         h1,
@@ -76,245 +83,445 @@
             font-weight: 700;
         }
 
-        /* Navbar */
+        /* Apple-inspired Background Pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(circle at 20% 80%, rgba(255, 59, 48, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(26, 26, 46, 0.03) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        /* Premium Navbar - Apple Style */
         .navbar {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 15px 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 20px 0;
             transition: var(--transition);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+            border-bottom: 1px solid rgba(255, 59, 48, 0.1);
         }
 
         .navbar.scrolled {
-            padding: 10px 0;
-            background-color: rgba(255, 255, 255, 0.98);
+            padding: 15px 0;
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
         }
 
         .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
             font-weight: 800;
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             color: var(--primary);
+            position: relative;
         }
 
         .navbar-brand span {
-            color: var(--secondary);
+            color: var(--apple-red);
+            position: relative;
         }
 
-        .navbar-brand img {
-            border-radius: 8px;
+        .navbar-brand span::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--apple-red-gradient);
+            border-radius: 2px;
         }
 
         .nav-link {
-            font-weight: 500;
+            font-weight: 600;
             color: var(--dark) !important;
-            margin: 0 8px;
+            margin: 0 15px;
             transition: var(--transition);
+            position: relative;
+            padding: 8px 0 !important;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--apple-red-gradient);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
         }
 
         .nav-link:hover,
         .nav-link.active {
-            color: var(--secondary) !important;
+            color: var(--apple-red) !important;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
+            background: var(--apple-red-gradient);
             border: none;
-            padding: 12px 30px;
-            border-radius: 8px;
+            padding: 14px 35px;
+            border-radius: 12px;
             font-weight: 600;
             transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #FF6257 0%, #FF3B30 100%);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .btn-primary:hover::before {
+            opacity: 1;
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: var(--shadow);
+            box-shadow: 0 15px 30px rgba(255, 59, 48, 0.3);
         }
 
         .btn-secondary {
             background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            padding: 10px 30px;
-            border-radius: 8px;
+            border: 2px solid var(--apple-red);
+            color: var(--apple-red);
+            padding: 12px 35px;
+            border-radius: 12px;
             font-weight: 600;
             transition: var(--transition);
+            position: relative;
+            overflow: hidden;
         }
 
         .btn-secondary:hover {
-            background: var(--primary);
+            background: var(--apple-red);
             color: white;
             transform: translateY(-3px);
-            box-shadow: var(--shadow);
+            box-shadow: 0 15px 30px rgba(255, 59, 48, 0.2);
         }
 
-        /* Hero Section */
+        /* Apple-Inspired Hero Section */
         .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1920&q=80');
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9)),
+                url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             color: white;
-            padding: 180px 0 100px;
+            padding: 200px 0 120px;
             min-height: 100vh;
             display: flex;
             align-items: center;
             position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(255, 59, 48, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 59, 48, 0.1) 0%, transparent 50%);
         }
 
         .hero-content h1 {
-            font-size: 3.5rem;
+            font-size: 4.2rem;
             font-weight: 800;
-            margin-bottom: 20px;
-            background: linear-gradient(to right, #fff, #E74C3C);
+            margin-bottom: 25px;
+            background: linear-gradient(to right, #FFF, var(--apple-red));
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
+            font-size: 1.3rem;
+            margin: 0 auto 40px;
             opacity: 0.9;
+            max-width: 700px;
         }
 
         .hero-stats {
             background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 30px;
-            margin-top: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 60px;
+            border: 1px solid rgba(255, 59, 48, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-stats::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--apple-red-gradient);
         }
 
         .stat-item {
             text-align: center;
-            padding: 15px;
+            padding: 20px;
+            position: relative;
+        }
+
+        .stat-item::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-item:last-child::after {
+            display: none;
         }
 
         .stat-number {
             display: block;
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 800;
-            color: var(--secondary);
+            background: var(--apple-red-gradient);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
         }
 
         .stat-text {
-            font-size: 0.9rem;
-            opacity: 0.8;
+            font-size: 1rem;
+            opacity: 0.9;
+            letter-spacing: 1px;
         }
 
-        /* About Section */
+        /* Premium Section Styling */
         .section-padding {
-            padding: 100px 0;
+            padding: 120px 0;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 80px;
         }
 
         .section-title h2 {
-            font-size: 2.5rem;
+            font-size: 3.2rem;
             color: var(--primary);
             position: relative;
             display: inline-block;
-            padding-bottom: 15px;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
         }
 
-        .section-title h2::after {
+        .section-title h2::before {
             content: '';
             position: absolute;
-            width: 80px;
+            width: 120px;
             height: 4px;
-            background: var(--secondary);
+            background: var(--apple-red-gradient);
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
             border-radius: 2px;
         }
 
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--apple-red);
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+        }
+
         .section-title p {
-            color: var(--gray);
-            max-width: 600px;
-            margin: 20px auto 0;
+            color: var(--dark);
+            max-width: 700px;
+            margin: 30px auto 0;
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+
+        /* Apple Red About Section */
+        .about-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: var(--apple-red-subtle);
+            opacity: 0.05;
+            border-radius: 50%;
         }
 
         .about-image {
             position: relative;
-            border-radius: 15px;
+            border-radius: 25px;
             overflow: hidden;
             box-shadow: var(--shadow);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: var(--transition);
+            border: 3px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                var(--apple-red-gradient) border-box;
+        }
+
+        .about-image:hover {
+            transform: perspective(1000px) rotateY(0deg);
         }
 
         .about-image img {
             width: 100%;
-            height: auto;
+            height: 600px;
+            object-fit: cover;
             transition: var(--transition);
-        }
-
-        .about-image:hover img {
-            transform: scale(1.05);
         }
 
         .experience-badge {
             position: absolute;
-            bottom: 30px;
-            right: 30px;
-            background: var(--secondary);
+            bottom: 40px;
+            right: 40px;
+            background: var(--apple-red-gradient);
             color: white;
-            padding: 20px;
-            border-radius: 10px;
+            padding: 25px;
+            border-radius: 15px;
             text-align: center;
-            box-shadow: var(--shadow);
+            box-shadow: 0 20px 40px rgba(255, 59, 48, 0.3);
+            border: 2px solid white;
         }
 
         .experience-badge .years {
             display: block;
-            font-size: 2rem;
+            font-size: 3rem;
             font-weight: 800;
-        }
-
-        .about-features {
-            margin-top: 30px;
+            color: white;
         }
 
         .feature-item {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
+            padding: 25px;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            border-left: 4px solid var(--apple-red);
+        }
+
+        .feature-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 15px 40px rgba(255, 59, 48, 0.1);
+            border-left-color: var(--apple-red-dark);
         }
 
         .feature-icon {
-            background: var(--primary);
+            background: var(--apple-red-gradient);
             color: white;
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 20px;
+            margin-right: 25px;
             flex-shrink: 0;
+            font-size: 1.5rem;
+            box-shadow: 0 10px 20px rgba(255, 59, 48, 0.2);
         }
 
-        /* Services Section */
+        /* Apple Red Services */
         .service-card {
             background: white;
-            border-radius: 15px;
+            border-radius: 20px;
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
             margin-bottom: 30px;
             height: 100%;
+            border: 2px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                var(--apple-red-gradient) border-box;
+            position: relative;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--apple-red-gradient);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(255, 59, 48, 0.15);
         }
 
         .service-img {
-            height: 200px;
+            height: 250px;
             overflow: hidden;
+            position: relative;
+        }
+
+        .service-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(255, 59, 48, 0.1) 100%);
         }
 
         .service-img img {
@@ -325,122 +532,177 @@
         }
 
         .service-card:hover .service-img img {
-            transform: scale(1.1);
+            transform: scale(1.15);
         }
 
         .service-content {
-            padding: 25px;
+            padding: 30px;
         }
 
         .service-content h3 {
             color: var(--primary);
-            margin-bottom: 15px;
-        }
-
-        .price {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--secondary);
-            margin: 15px 0;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
         }
 
         .service-features {
             list-style: none;
             padding: 0;
-            margin: 20px 0;
+            margin: 25px 0;
         }
 
         .service-features li {
-            padding: 5px 0;
-            color: var(--gray);
+            padding: 8px 0;
+            color: var(--dark);
+            position: relative;
+            padding-left: 30px;
         }
 
-        .service-features i {
-            color: var(--secondary);
-            margin-right: 10px;
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--apple-red);
+            font-weight: bold;
+            font-size: 1.2rem;
         }
 
-        /* Process Section */
+        /* Apple Red Process */
         .process-step {
             text-align: center;
-            padding: 30px 20px;
+            padding: 40px 30px;
             position: relative;
             background: white;
-            border-radius: 15px;
+            border-radius: 20px;
             box-shadow: var(--shadow);
             margin-bottom: 30px;
             transition: var(--transition);
+            border: 2px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                var(--apple-red-gradient) border-box;
+            height: 100%;
         }
 
         .process-step:hover {
-            transform: translateY(-10px);
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px rgba(255, 59, 48, 0.1);
         }
 
         .step-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
+            width: 100px;
+            height: 100px;
+            background: var(--apple-red-gradient);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
+            margin: 0 auto 25px;
             color: white;
-            font-size: 2rem;
+            font-size: 2.5rem;
+            box-shadow: 0 15px 30px rgba(255, 59, 48, 0.2);
+            position: relative;
+        }
+
+        .step-icon::after {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border: 2px solid rgba(255, 59, 48, 0.3);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0.8);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.2);
+                opacity: 0;
+            }
         }
 
         .step-number {
             position: absolute;
             top: -15px;
             right: -15px;
-            background: var(--secondary);
+            background: var(--apple-red-gradient);
             color: white;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 800;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
+            box-shadow: 0 10px 20px rgba(255, 59, 48, 0.3);
         }
 
-        /* Portfolio Section */
+        /* Apple Red Portfolio */
         .portfolio-filter {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 40px;
+            gap: 15px;
+            margin-bottom: 60px;
         }
 
         .filter-btn {
             background: white;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            padding: 8px 25px;
+            border: 2px solid var(--apple-red);
+            color: var(--apple-red);
+            padding: 12px 35px;
             border-radius: 30px;
             font-weight: 600;
             transition: var(--transition);
             cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .filter-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--apple-red-gradient);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: -1;
+            border-radius: 30px;
         }
 
         .filter-btn.active,
         .filter-btn:hover {
-            background: var(--primary);
             color: white;
+            border-color: transparent;
+        }
+
+        .filter-btn.active::before,
+        .filter-btn:hover::before {
+            opacity: 1;
         }
 
         .portfolio-item {
             position: relative;
             margin-bottom: 30px;
-            border-radius: 15px;
+            border-radius: 20px;
             overflow: hidden;
             box-shadow: var(--shadow);
+            height: 400px;
+            border: 3px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                var(--apple-red-gradient) border-box;
         }
 
         .portfolio-img {
-            height: 300px;
+            height: 100%;
             overflow: hidden;
         }
 
@@ -457,37 +719,105 @@
 
         .portfolio-overlay {
             position: absolute;
-            bottom: 0;
+            top: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            bottom: 0;
+            background: linear-gradient(to top, rgba(255, 59, 48, 0.9), transparent);
             color: white;
-            padding: 30px;
-            transform: translateY(100%);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            opacity: 0;
             transition: var(--transition);
         }
 
         .portfolio-item:hover .portfolio-overlay {
-            transform: translateY(0);
+            opacity: 1;
         }
 
-        /* Team Section */
+        /* Apple Red Testimonials */
+        .testimonials-section {
+            background-color: #000000;
+            position: relative;
+        }
+
+        .testimonials-section .section-title h2,
+        .testimonials-section .section-title p {
+            color: white;
+        }
+
+        /* Apple Red Team Section - All Round Images */
+        .team-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(255, 59, 48, 0.05) 0%, transparent 70%);
+            z-index: -1;
+        }
+
         .team-card {
             background: white;
-            border-radius: 15px;
+            border-radius: 20px;
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
             margin-bottom: 30px;
+            border: 3px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                var(--apple-red-gradient) border-box;
+            text-align: center;
+            padding: 30px;
         }
 
         .team-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px rgba(255, 59, 48, 0.1);
         }
 
+        /* Round Team Images with Apple Red Border */
         .team-img {
-            height: 300px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
             overflow: hidden;
+            margin: 0 auto 25px;
+            border: 5px solid white;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .team-img::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            background: var(--apple-red-gradient);
+            z-index: -1;
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         .team-img img {
@@ -501,122 +831,282 @@
             transform: scale(1.1);
         }
 
-        .team-info {
-            padding: 25px;
-            text-align: center;
-        }
-
         .team-info h4 {
             color: var(--primary);
-            margin-bottom: 5px;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
         }
 
         .team-info p {
-            color: var(--secondary);
+            color: var(--apple-red);
             font-weight: 600;
             margin-bottom: 15px;
+            font-size: 1.1rem;
         }
 
         .team-social {
             display: flex;
             justify-content: center;
             gap: 15px;
+            margin-top: 20px;
         }
 
         .team-social a {
-            width: 35px;
-            height: 35px;
-            background: var(--light);
+            width: 45px;
+            height: 45px;
+            background: var(--silver);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--primary);
+            color: var(--apple-red);
             transition: var(--transition);
+            font-size: 1.2rem;
         }
 
         .team-social a:hover {
-            background: var(--primary);
+            background: var(--apple-red-gradient);
             color: white;
-            transform: translateY(-3px);
+            transform: translateY(-5px);
         }
 
-        /* Contact Section */
+        /* Apple Red Testimonials with Round Images */
+        .testimonials-section {
+            background: var(--apple-red-gradient);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            border-color: white;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            position: relative;
+            padding: 0 20px;
+        }
+
+        .testimonial-text::before,
+        .testimonial-text::after {
+            content: '"';
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.5);
+            position: absolute;
+            font-family: serif;
+        }
+
+        .testimonial-text::before {
+            top: -20px;
+            left: 0;
+        }
+
+        .testimonial-text::after {
+            bottom: -40px;
+            right: 0;
+        }
+
+        /* Round Testimonial Images with Apple Red Border */
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .author-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid white;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background: var(--apple-red-gradient);
+            padding: 3px;
+        }
+
+        .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .author-info {
+            text-align: left;
+        }
+
+        .author-info h5 {
+            color: white;
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        .author-info p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        /* Apple Red Contact Section */
+        .contact-section {
+            position: relative;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            background: var(--apple-red-subtle);
+            opacity: 0.05;
+            border-radius: 50%;
+        }
+
         .contact-info {
             background: white;
-            padding: 30px;
-            border-radius: 15px;
+            padding: 40px;
+            border-radius: 25px;
             box-shadow: var(--shadow);
+            border: 3px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                var(--apple-red-gradient) border-box;
+            height: 100%;
         }
 
         .contact-item {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
+            padding: 25px;
+            border-radius: 15px;
+            background: var(--silver);
+            transition: var(--transition);
+            border-left: 4px solid var(--apple-red);
+        }
+
+        .contact-item:hover {
+            transform: translateX(10px);
+            background: white;
+            box-shadow: 0 15px 40px rgba(255, 59, 48, 0.1);
+            border-left-color: var(--apple-red-dark);
         }
 
         .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--primary);
+            width: 60px;
+            height: 60px;
+            background: var(--apple-red-gradient);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 20px;
+            margin-right: 25px;
             flex-shrink: 0;
+            font-size: 1.5rem;
+            box-shadow: 0 10px 20px rgba(255, 59, 48, 0.2);
         }
 
         .contact-form {
             background: white;
-            padding: 40px;
-            border-radius: 15px;
+            padding: 50px;
+            border-radius: 25px;
             box-shadow: var(--shadow);
+            border: 3px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                var(--apple-red-gradient) border-box;
         }
 
         .form-control {
-            padding: 12px 20px;
+            padding: 15px 25px;
             border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            margin-bottom: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
             transition: var(--transition);
+            font-size: 1rem;
+            background: var(--silver);
         }
 
         .form-control:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 0.25rem rgba(44, 62, 80, 0.25);
+            border-color: var(--apple-red);
+            box-shadow: 0 0 0 0.25rem rgba(255, 59, 48, 0.25);
+            transform: translateY(-2px);
+            background: white;
         }
 
-        /* Footer */
+        /* Apple Red Footer */
         .footer-section {
-            background: var(--dark);
+            background: var(--apple-red-gradient);
             color: white;
-            padding: 80px 0 20px;
+            padding: 100px 0 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: white;
         }
 
         .footer-logo {
-            font-size: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
             font-weight: 800;
             color: white;
             text-decoration: none;
             display: inline-block;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            position: relative;
         }
 
         .footer-logo span {
-            color: var(--secondary);
+            color: rgba(255, 255, 255, 0.9);
         }
 
         .social-icons {
             display: flex;
-            gap: 15px;
-            margin-top: 20px;
+            gap: 20px;
+            margin-top: 25px;
         }
 
         .social-icons a {
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             display: flex;
@@ -624,26 +1114,48 @@
             justify-content: center;
             color: white;
             transition: var(--transition);
+            font-size: 1.2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-icons a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            opacity: 0;
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .social-icons a:hover::before {
+            opacity: 1;
         }
 
         .social-icons a:hover {
-            background: var(--secondary);
-            transform: translateY(-3px);
+            color: var(--apple-red);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
         .footer-links h4 {
             color: white;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             position: relative;
-            padding-bottom: 10px;
+            padding-bottom: 15px;
+            font-size: 1.5rem;
         }
 
         .footer-links h4::after {
             content: '';
             position: absolute;
-            width: 40px;
+            width: 50px;
             height: 3px;
-            background: var(--secondary);
+            background: white;
             bottom: 0;
             left: 0;
             border-radius: 2px;
@@ -655,70 +1167,89 @@
         }
 
         .footer-links li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .footer-links a {
-            color: #bbb;
+            color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             transition: var(--transition);
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .footer-links a::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            opacity: 0;
+            transition: var(--transition);
+            color: white;
         }
 
         .footer-links a:hover {
-            color: var(--secondary);
-            padding-left: 5px;
+            color: white;
+            padding-left: 30px;
+        }
+
+        .footer-links a:hover::before {
+            opacity: 1;
         }
 
         .newsletter-form {
             display: flex;
-            gap: 10px;
-            margin-top: 20px;
+            gap: 15px;
+            margin-top: 25px;
         }
 
         .newsletter-form input {
             flex: 1;
-            padding: 12px 15px;
+            padding: 15px 25px;
             border: none;
-            border-radius: 8px;
+            border-radius: 12px;
             background: rgba(255, 255, 255, 0.1);
             color: white;
+            font-size: 1rem;
         }
 
         .newsletter-form input::placeholder {
-            color: #bbb;
+            color: rgba(255, 255, 255, 0.6);
         }
 
         .newsletter-form button {
-            background: var(--secondary);
+            background: white;
             border: none;
-            color: white;
-            width: 50px;
-            border-radius: 8px;
+            color: var(--apple-red);
+            padding: 15px 30px;
+            border-radius: 12px;
             cursor: pointer;
             transition: var(--transition);
+            font-weight: 600;
         }
 
         .newsletter-form button:hover {
-            background: var(--primary);
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
         .copyright {
             text-align: center;
-            padding-top: 40px;
-            margin-top: 40px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #bbb;
+            padding-top: 50px;
+            margin-top: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.6);
             font-size: 0.9rem;
         }
 
-        /* Back to Top */
+        /* Premium Floating Elements */
         .back-to-top {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            width: 50px;
-            height: 50px;
-            background: var(--primary);
+            width: 60px;
+            height: 60px;
+            background: var(--apple-red-gradient);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -729,6 +1260,8 @@
             visibility: hidden;
             transition: var(--transition);
             z-index: 1000;
+            box-shadow: 0 10px 30px rgba(255, 59, 48, 0.3);
+            font-size: 1.5rem;
         }
 
         .back-to-top.active {
@@ -737,108 +1270,182 @@
         }
 
         .back-to-top:hover {
-            background: var(--secondary);
-            transform: translateY(-5px);
+            background: var(--apple-red-dark);
+            transform: translateY(-10px) scale(1.1);
+            box-shadow: 0 20px 40px rgba(255, 59, 48, 0.4);
         }
 
-        /* Floating Buttons */
+        /* Apple Red Floating Buttons */
         .floating-buttons {
             position: fixed;
-            bottom: 100px;
+            bottom: 120px;
             right: 30px;
             z-index: 1000;
         }
 
         .float-btn {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             text-decoration: none;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             box-shadow: var(--shadow);
             transition: var(--transition);
+            font-size: 1.8rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .float-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            opacity: 0;
+            transition: var(--transition);
+            border-radius: 50%;
+        }
+
+        .float-btn:hover::before {
+            opacity: 1;
         }
 
         .float-whatsapp {
-            background: #25D366;
+            background: linear-gradient(135deg, #25D366, #128C7E);
         }
 
         .float-btn:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px) scale(1.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
-        /* Theme Toggle */
+        /* Apple Red Theme Toggle */
         .theme-toggle {
-            background: var(--light);
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            width: 40px;
-            height: 40px;
+            background: var(--silver);
+            border: 2px solid var(--apple-red);
+            color: var(--apple-red);
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: var(--transition);
-            margin-right: 15px;
+            margin-right: 20px;
+            font-size: 1.3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .theme-toggle::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--apple-red-gradient);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: -1;
+            border-radius: 50%;
+        }
+
+        .theme-toggle:hover::before {
+            opacity: 1;
         }
 
         .theme-toggle:hover {
-            background: var(--primary);
             color: white;
+            border-color: transparent;
+            transform: rotate(180deg);
         }
 
         /* Responsive Design */
-        @media (max-width: 992px) {
+        @media (max-width: 1400px) {
             .hero-content h1 {
-                font-size: 2.5rem;
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .section-title h2 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero-section {
+                padding: 180px 0 100px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.8rem;
             }
 
             .section-padding {
-                padding: 70px 0;
+                padding: 80px 0;
             }
 
-            .floating-buttons {
-                bottom: 80px;
-                right: 20px;
+            .stat-item::after {
+                display: none;
+            }
+
+            .team-img {
+                width: 180px;
+                height: 180px;
             }
         }
 
         @media (max-width: 768px) {
             .hero-content h1 {
-                font-size: 2rem;
+                font-size: 2.4rem;
             }
 
-            .hero-stats {
-                padding: 20px;
+            .hero-content p {
+                font-size: 1.1rem;
             }
 
-            .stat-number {
-                font-size: 2rem;
+            .section-title h2 {
+                font-size: 2.4rem;
             }
 
             .contact-form {
-                padding: 20px;
+                padding: 30px;
             }
 
-            .portfolio-filter {
-                flex-direction: column;
-                align-items: center;
+            .team-img {
+                width: 160px;
+                height: 160px;
             }
 
-            .filter-btn {
-                width: 200px;
-                margin-bottom: 10px;
+            .floating-buttons {
+                bottom: 100px;
+                right: 20px;
+            }
+
+            .float-btn {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
             }
         }
 
         @media (max-width: 576px) {
             .hero-section {
-                padding: 150px 0 80px;
+                padding: 160px 0 80px;
             }
 
             .section-title h2 {
@@ -846,27 +1453,43 @@
             }
 
             .team-img {
-                height: 250px;
+                width: 140px;
+                height: 140px;
+            }
+
+            .filter-btn {
+                padding: 10px 25px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
             }
         }
     </style>
 </head>
 
 <body>
-    <!-- ===== Navbar ===== -->
+    <!-- Luxury Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- ===== Apple Red Navbar ===== -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="img/logo.jpg" alt="JustAsk Architecture" class="me-2" style="max-height: 40px;">
-                <span>Just</span>Ask
+                <img src="img/logo.jpg" alt="JustAsk Architecture" class="me-3"
+                    style="max-height: 50px; border-radius: 10px;">
+                <div>
+                    <div>Just<span>Ask</span></div>
+                    <div class="small" style="font-size: 0.8rem; color: var(--apple-red);">ARCHITECTURE & DESIGN</div>
+                </div>
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+                <i class="fas fa-bars" style="color: var(--apple-red);"></i>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link active" href="#home">Home</a>
                     </li>
@@ -897,46 +1520,46 @@
         </div>
     </nav>
 
-    <!-- ===== Hero Section ===== -->
+    <!-- ===== Apple Red Hero Section ===== -->
     <section id="home" class="hero-section">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-8 mx-auto text-center">
+                <div class="col-lg-10 mx-auto text-center">
                     <div class="hero-content">
-                        <h1 data-aos="fade-down">Transform Your Vision Into Reality</h1>
-                        <p data-aos="fade-up" data-aos-delay="200">Professional architectural design and drafting
-                            services for residential and commercial projects.
-                            <br>2D & 3D Drawing • Council Drawings • Interior Design • Structural Design
+                        <h1 data-aos="fade-down" data-aos-delay="100">Precision Architecture Redefined</h1>
+                        <p data-aos="fade-up" data-aos-delay="300">Premium architectural design and drafting services
+                            for luxury residential and commercial projects.
+                            <br>Innovative Design • Superior Craftsmanship • Timeless Excellence
                         </p>
-                        <div class="hero-btns" data-aos="fade-up" data-aos-delay="400">
+                        <div class="hero-btns" data-aos="fade-up" data-aos-delay="500">
                             <a href="#services" class="btn btn-primary me-3">Our Services</a>
-                            <a href="#portfolio" class="btn btn-secondary">View Projects</a>
+                            <a href="#portfolio" class="btn btn-secondary">View Portfolio</a>
                         </div>
                     </div>
 
-                    <div class="hero-stats">
+                    <div class="hero-stats" data-aos="fade-up" data-aos-delay="700">
                         <div class="row">
                             <div class="col-md-3 col-6">
                                 <div class="stat-item">
-                                    <span class="stat-number">150</span>
+                                    <span class="stat-number">200+</span>
                                     <span class="stat-text">Projects Completed</span>
                                 </div>
                             </div>
                             <div class="col-md-3 col-6">
                                 <div class="stat-item">
-                                    <span class="stat-number">85</span>
+                                    <span class="stat-number">20+</span>
                                     <span class="stat-text">Happy Clients</span>
                                 </div>
                             </div>
                             <div class="col-md-3 col-6">
                                 <div class="stat-item">
-                                    <span class="stat-number">12</span>
+                                    <span class="stat-number">+2</span>
                                     <span class="stat-text">Years Experience</span>
                                 </div>
                             </div>
                             <div class="col-md-3 col-6">
                                 <div class="stat-item">
-                                    <span class="stat-number">25</span>
+                                    <span class="stat-number">35</span>
                                     <span class="stat-text">Awards Won</span>
                                 </div>
                             </div>
@@ -947,47 +1570,47 @@
         </div>
     </section>
 
-    <!-- ===== About Section ===== -->
+    <!-- ===== Apple Red About Section ===== -->
     <section id="about" class="about-section section-padding">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-right">
                     <div class="about-image">
-                        <img src="img/picture (7).jpeg" alt="About JustAsk Architecture">
+                        <img src="img/logo.jpg" alt="About JustAsk Architecture">
                         <div class="experience-badge">
-                            <span class="years">2</span>
-                            <span class="text">Years Experience</span>
+                            <span class="years">+2</span>
+                            <span class="text">Years Excellence</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
-                    <div class="section-title mb-4 text-lg-start">
-                        <h2>About JustAsk Architecture</h2>
+                    <div class="section-title mb-5 text-lg-start">
+                        <h2>Engineering Excellence Since 2010</h2>
                     </div>
-                    <p>JustAsk Architecture is a premier architectural design firm with over 12 years of experience
-                        providing innovative design solutions for residential and commercial projects in Trincomalee and
+                    <p class="lead">JustAsk Architecture is a premier architectural design firm with over 2 years of
+                        experience providing innovative design solutions for luxury residential and commercial projects
                         across Sri Lanka.</p>
                     <p>Our team of skilled architects and designers combines technical expertise with creative vision to
                         deliver exceptional architectural services that exceed client expectations. We believe in
                         building long-term relationships by providing reliable, innovative design solutions.</p>
 
-                    <div class="about-features">
+                    <div class="about-features mt-5">
                         <div class="feature-item">
                             <div class="feature-icon">
-                                <i class="fas fa-award"></i>
+                                <i class="fas fa-gem"></i>
                             </div>
                             <div>
-                                <h5>Quality Assurance</h5>
+                                <h5>Premium Quality</h5>
                                 <p>We use premium design tools and follow international standards to ensure the highest
                                     quality architectural drawings.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">
-                                <i class="fas fa-shipping-fast"></i>
+                                <i class="fas fa-clock"></i>
                             </div>
                             <div>
-                                <h5>Timely Delivery</h5>
+                                <h5>Precision Timing</h5>
                                 <p>We understand construction deadlines and ensure timely delivery without compromising
                                     on quality.</p>
                             </div>
@@ -997,7 +1620,7 @@
                                 <i class="fas fa-headset"></i>
                             </div>
                             <div>
-                                <h5>24/7 Support</h5>
+                                <h5>Premium Support</h5>
                                 <p>Our technical support team is always ready to assist you with any queries or
                                     concerns.</p>
                             </div>
@@ -1008,12 +1631,12 @@
         </div>
     </section>
 
-    <!-- ===== Services Section ===== -->
+    <!-- ===== Apple Red Services Section ===== -->
     <section id="services" class="services-section section-padding">
         <div class="container">
             <div class="section-title" data-aos="fade-up">
-                <h2>Our Architectural Services</h2>
-                <p>Comprehensive design solutions for all your architectural needs</p>
+                <h2>Premium Architectural Services</h2>
+                <p>Comprehensive design solutions for luxury architectural needs</p>
             </div>
 
             <div class="row">
@@ -1021,18 +1644,18 @@
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-card">
                         <div class="service-img">
-                            <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=800&q=80"
+                            <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80"
                                 alt="2D & 3D Drawing">
                         </div>
                         <div class="service-content">
                             <h3>2D & 3D Architectural Drawings</h3>
-                            <p>Detailed floor plans, elevations, sections, and photorealistic 3D visualizations for your
-                                projects.</p>
+                            <p>Detailed floor plans, elevations, sections, and photorealistic 3D visualizations for
+                                luxury projects.</p>
                             <ul class="service-features">
-                                <li><i class="fas fa-check"></i> Detailed Floor Plans</li>
-                                <li><i class="fas fa-check"></i> Elevations & Sections</li>
-                                <li><i class="fas fa-check"></i> 3D Modeling</li>
-                                <li><i class="fas fa-check"></i> Photorealistic Rendering</li>
+                                <li>Detailed Floor Plans</li>
+                                <li>Elevations & Sections</li>
+                                <li>3D Modeling</li>
+                                <li>Photorealistic Rendering</li>
                             </ul>
                             <a href="#contact" class="btn btn-primary w-100">Get Quote</a>
                         </div>
@@ -1043,18 +1666,18 @@
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-card">
                         <div class="service-img">
-                            <img src="https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?auto=format&fit=crop&w=800&q=80"
+                            <img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=800&q=80"
                                 alt="Interior Design">
                         </div>
                         <div class="service-content">
-                            <h3>Interior Design & Planning</h3>
+                            <h3>Luxury Interior Design</h3>
                             <p>Complete interior design solutions with space planning, material selection, and lighting
                                 design.</p>
                             <ul class="service-features">
-                                <li><i class="fas fa-check"></i> Space Planning</li>
-                                <li><i class="fas fa-check"></i> Material Selection</li>
-                                <li><i class="fas fa-check"></i> Lighting Design</li>
-                                <li><i class="fas fa-check"></i> Furniture Layout</li>
+                                <li>Space Planning</li>
+                                <li>Material Selection</li>
+                                <li>Lighting Design</li>
+                                <li>Furniture Layout</li>
                             </ul>
                             <a href="#contact" class="btn btn-primary w-100">Get Quote</a>
                         </div>
@@ -1065,18 +1688,18 @@
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-card">
                         <div class="service-img">
-                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
+                            <img src="https://images.unsplash.com/photo-1566913293052-8c8c46d30bf1?auto=format&fit=crop&w=800&q=80"
                                 alt="Structural Design">
                         </div>
                         <div class="service-content">
                             <h3>Structural Design & Analysis</h3>
-                            <p>Professional structural engineering services for residential and commercial buildings.
-                            </p>
+                            <p>Professional structural engineering services for luxury residential and commercial
+                                buildings.</p>
                             <ul class="service-features">
-                                <li><i class="fas fa-check"></i> Structural Calculations</li>
-                                <li><i class="fas fa-check"></i> Foundation Design</li>
-                                <li><i class="fas fa-check"></i> Steel & Concrete Design</li>
-                                <li><i class="fas fa-check"></i> Seismic Analysis</li>
+                                <li>Structural Calculations</li>
+                                <li>Foundation Design</li>
+                                <li>Steel & Concrete Design</li>
+                                <li>Seismic Analysis</li>
                             </ul>
                             <a href="#contact" class="btn btn-primary w-100">Get Quote</a>
                         </div>
@@ -1086,12 +1709,12 @@
         </div>
     </section>
 
-    <!-- ===== Process Section ===== -->
+    <!-- ===== Apple Red Process Section ===== -->
     <section id="process" class="process-section section-padding">
         <div class="container">
             <div class="section-title" data-aos="fade-up">
                 <h2>Our Design Process</h2>
-                <p>How we transform your ideas into architectural reality</p>
+                <p>Transforming your vision into architectural reality</p>
             </div>
 
             <div class="row">
@@ -1099,7 +1722,7 @@
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="process-step">
                         <div class="step-icon">
-                            <i class="fas fa-file-invoice"></i>
+                            <i class="fas fa-comments"></i>
                         </div>
                         <div class="step-number">1</div>
                         <h4>Consultation & Brief</h4>
@@ -1111,7 +1734,7 @@
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="process-step">
                         <div class="step-icon">
-                            <i class="fas fa-paint-brush"></i>
+                            <i class="fas fa-lightbulb"></i>
                         </div>
                         <div class="step-number">2</div>
                         <h4>Concept Design</h4>
@@ -1135,7 +1758,7 @@
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
                     <div class="process-step">
                         <div class="step-icon">
-                            <i class="fas fa-file-certificate"></i>
+                            <i class="fas fa-check-circle"></i>
                         </div>
                         <div class="step-number">4</div>
                         <h4>Approval & Construction</h4>
@@ -1146,17 +1769,17 @@
         </div>
     </section>
 
-    <!-- ===== Portfolio Section ===== -->
+    <!-- ===== Apple Red Portfolio Section ===== -->
     <section id="portfolio" class="portfolio-section section-padding">
         <div class="container">
             <div class="section-title" data-aos="fade-up">
-                <h2>Our Projects</h2>
-                <p>See some of our recent architectural projects and designs</p>
+                <h2>Our Portfolio</h2>
+                <p>Showcasing our premium architectural projects and designs</p>
             </div>
 
             <div class="portfolio-filter" data-aos="fade-up">
                 <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="residential">Luxury Villas</button>
                 <button class="filter-btn" data-filter="commercial">Commercial</button>
                 <button class="filter-btn" data-filter="interior">Interior Design</button>
             </div>
@@ -1170,10 +1793,10 @@
                             alt="Modern Villa Design">
                     </div>
                     <div class="portfolio-overlay">
-                        <h4>Modern Villa Design</h4>
-                        <p>Contemporary residential villa with pool and garden</p>
+                        <h4>Modern Luxury Villa</h4>
+                        <p>Contemporary residential villa with infinity pool and landscape garden</p>
                         <a href="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80"
-                            data-lightbox="portfolio" class="btn btn-secondary mt-3">View Larger</a>
+                            data-lightbox="portfolio" class="btn btn-secondary mt-3">View Project</a>
                     </div>
                 </div>
 
@@ -1186,9 +1809,9 @@
                     </div>
                     <div class="portfolio-overlay">
                         <h4>Commercial Office Building</h4>
-                        <p>Three-story office building with glass facade</p>
+                        <p>Three-story office building with glass facade and modern amenities</p>
                         <a href="https://images.unsplash.com/photo-1487956382158-bb926046304a?auto=format&fit=crop&w=800&q=80"
-                            data-lightbox="portfolio" class="btn btn-secondary mt-3">View Larger</a>
+                            data-lightbox="portfolio" class="btn btn-secondary mt-3">View Project</a>
                     </div>
                 </div>
 
@@ -1201,66 +1824,21 @@
                     </div>
                     <div class="portfolio-overlay">
                         <h4>Luxury Apartment Interior</h4>
-                        <p>Modern interior design for high-end apartment</p>
+                        <p>Modern interior design for high-end apartment with premium finishes</p>
                         <a href="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=800&q=80"
-                            data-lightbox="portfolio" class="btn btn-secondary mt-3">View Larger</a>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 4 -->
-                <div class="col-lg-4 col-md-6 portfolio-item" data-category="residential" data-aos="zoom-in"
-                    data-aos-delay="400">
-                    <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
-                            alt="Traditional House">
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h4>Traditional Sri Lankan House</h4>
-                        <p>Modern interpretation of traditional architecture</p>
-                        <a href="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
-                            data-lightbox="portfolio" class="btn btn-secondary mt-3">View Larger</a>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 5 -->
-                <div class="col-lg-4 col-md-6 portfolio-item" data-category="commercial" data-aos="zoom-in"
-                    data-aos-delay="500">
-                    <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80"
-                            alt="Shopping Complex">
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h4>Shopping Complex Design</h4>
-                        <p>Multi-retail complex with parking facilities</p>
-                        <a href="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80"
-                            data-lightbox="portfolio" class="btn btn-secondary mt-3">View Larger</a>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 6 -->
-                <div class="col-lg-4 col-md-6 portfolio-item" data-category="interior" data-aos="zoom-in"
-                    data-aos-delay="600">
-                    <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1553444836-bc6c8d340ba7?auto=format&fit=crop&w=800&q=80"
-                            alt="Restaurant Interior">
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h4>Fine Dining Restaurant</h4>
-                        <p>Complete interior design for premium restaurant</p>
-                        <a href="https://images.unsplash.com/photo-1553444836-bc6c8d340ba7?auto=format&fit=crop&w=800&q=80"
-                            data-lightbox="portfolio" class="btn btn-secondary mt-3">View Larger</a>
+                            data-lightbox="portfolio" class="btn btn-secondary mt-3">View Project</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== Testimonials Section ===== -->
+    <!-- ===== Apple Red Testimonials Section ===== -->
     <section id="testimonials" class="testimonials-section section-padding">
         <div class="container">
             <div class="section-title" data-aos="fade-up">
                 <h2>Client Testimonials</h2>
-                <p>What our clients say about our architectural services</p>
+                <p>What our clients say about our premium architectural services</p>
             </div>
 
             <div class="owl-carousel testimonial-slider" data-aos="fade-up">
@@ -1269,11 +1847,12 @@
                     <div class="testimonial-text">
                         "JustAsk Architecture exceeded our expectations with their modern villa design. The 3D
                         visualizations helped us visualize the final product perfectly. Highly recommended for any
-                        residential project!"
+                        luxury residential project!"
                     </div>
                     <div class="testimonial-author">
                         <div class="author-img">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
+                                alt="Michael Rodriguez">
                         </div>
                         <div class="author-info">
                             <h5>Michael Rodriguez</h5>
@@ -1291,7 +1870,8 @@
                     </div>
                     <div class="testimonial-author">
                         <div class="author-img">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=200&q=80"
+                                alt="Sarah Johnson">
                         </div>
                         <div class="author-info">
                             <h5>Sarah Johnson</h5>
@@ -1309,7 +1889,8 @@
                     </div>
                     <div class="testimonial-author">
                         <div class="author-img">
-                            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Client">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80"
+                                alt="David Chen">
                         </div>
                         <div class="author-info">
                             <h5>David Chen</h5>
@@ -1321,7 +1902,7 @@
         </div>
     </section>
 
-    <!-- ===== Team Section ===== -->
+    <!-- ===== Apple Red Team Section ===== -->
     <section id="team" class="team-section section-padding">
         <div class="container">
             <div class="section-title" data-aos="fade-up">
@@ -1329,16 +1910,17 @@
                 <p>Meet the professionals behind JustAsk Architecture</p>
             </div>
 
-            <div class="row">
-                <!-- Team Member 1 -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="team-card">
-                        <div class="team-img">
-                            <img src="img/picture (1).jpeg" alt="Mohamed Saththir">
+            <div class="row justify-content-center">
+                <!-- CEO - Large Round Image -->
+                <div class="col-lg-4 col-md-6 mb-5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-card"
+                        style="border: 3px solid transparent; background: linear-gradient(white, white) padding-box, var(--apple-red-gradient) border-box;">
+                        <div class="team-img" style="width: 220px; height: 220px;">
+                            <img src="img/picture (1).jpeg" alt="Mohamed Saththir - CEO">
                         </div>
                         <div class="team-info">
                             <h4>Mohamed Saththir</h4>
-                            <p>CEO & Principal Architect</p>
+                            <p style="color: var(--apple-red);">CEO & Principal Architect</p>
                             <p class="small">HND Civil Engineering • AutoCAD • BIM</p>
                             <div class="team-social">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -1357,7 +1939,7 @@
                         </div>
                         <div class="team-info">
                             <h4>M.M.Rilan Ahamed</h4>
-                            <p>Technical Officer</p>
+                            <p style="color: var(--apple-red);">Technical Officer</p>
                             <p class="small">Engineering Draughtsman • Quantity Surveying</p>
                             <div class="team-social">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -1376,7 +1958,7 @@
                         </div>
                         <div class="team-info">
                             <h4>M.H.M.Musthak</h4>
-                            <p>Engineering Draughtsman</p>
+                            <p style="color: var(--apple-red);">Engineering Draughtsman</p>
                             <p class="small">Structural Drawing • CAD Specialist</p>
                             <div class="team-social">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -1395,7 +1977,7 @@
                         </div>
                         <div class="team-info">
                             <h4>M.S.Luthfi Ahamed</h4>
-                            <p>3D Modeler & Architectural Draughtsman</p>
+                            <p style="color: var(--apple-red);">3D Modeler & Architectural Draughtsman</p>
                             <p class="small">HND Quantity Surveying • 3D Visualization</p>
                             <div class="team-social">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -1414,9 +1996,8 @@
                         </div>
                         <div class="team-info">
                             <h4>M.N.M.Ifthisam</h4>
-                            <p>3D Modeler</p>
-                            <p class="small">Dip in Revit architecture • Dip in SketchUp • Dip in lumion • HND in
-                                Quantity surveying</p>
+                            <p style="color: var(--apple-red);">3D Modeler</p>
+                            <p class="small">Dip in Revit • SketchUp • Lumion • HND in Quantity Surveying</p>
                             <div class="team-social">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -1429,12 +2010,12 @@
         </div>
     </section>
 
-    <!-- ===== Contact Section ===== -->
+    <!-- ===== Apple Red Contact Section ===== -->
     <section id="contact" class="contact-section section-padding">
         <div class="container">
             <div class="section-title" data-aos="fade-up">
                 <h2>Get In Touch</h2>
-                <p>Contact us for architectural consultations or project inquiries</p>
+                <p>Contact us for premium architectural consultations</p>
             </div>
 
             <div class="row">
@@ -1485,21 +2066,18 @@
                         <form id="contactForm">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Your Name"
-                                        aria-label="Your Name" required>
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="email" class="form-control" placeholder="Your Email"
-                                        aria-label="Your Email" required>
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input type="tel" class="form-control" placeholder="Phone Number"
-                                        aria-label="Phone Number">
+                                    <input type="tel" class="form-control" placeholder="Phone Number">
                                 </div>
                                 <div class="col-md-6">
-                                    <select class="form-control" aria-label="Select Service" required>
+                                    <select class="form-control" required>
                                         <option value="">Select Service</option>
                                         <option>2D & 3D Drawing</option>
                                         <option>Council Drawings</option>
@@ -1513,19 +2091,20 @@
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <input type="text" class="form-control" placeholder="Project Title"
-                                        aria-label="Project Title">
+                                    <input type="text" class="form-control" placeholder="Project Title">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <textarea class="form-control" placeholder="Your Project Details" rows="5"
-                                        aria-label="Your Message" required></textarea>
+                                    <textarea class="form-control" placeholder="Your Project Details" rows="6"
+                                        required></textarea>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                                    <button type="submit" class="btn btn-primary w-100 py-3">
+                                        <i class="fas fa-paper-plane me-2"></i>Send Message
+                                    </button>
                                 </div>
                             </div>
                         </form>
@@ -1533,14 +2112,13 @@
                 </div>
             </div>
 
-            <!-- Google Map Integration -->
+            <!-- Google Map -->
             <div class="row mt-5" data-aos="fade-up">
                 <div class="col-12">
-                    <div class="map-container"
-                        style="border-radius: 15px; overflow: hidden; box-shadow: var(--shadow);">
+                    <div class="map-container">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d987.4177509437208!2d81.189250!3d8.501667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMzAnMDYuMCJOIDgxwrAxMScyMS4zIkU!5e0!3m2!1sen!2slk!4v1738005212000!5m2!1sen!2slk"
-                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            width="100%" height="450" style="border:0;" allowfullscreen loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"
                             title="JustAsk Office Location - No-14, Front of Girls School, Kinniya">
                         </iframe>
@@ -1550,11 +2128,11 @@
         </div>
     </section>
 
-    <!-- ===== Footer ===== -->
+    <!-- ===== Apple Red Footer ===== -->
     <footer class="footer-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="footer-about">
                         <a href="#" class="footer-logo"><span>Just</span>Ask</a>
                         <p>Providing premium architectural design services in Trincomalee since 2010. We combine
@@ -1568,7 +2146,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-6">
+                <div class="col-lg-2 col-md-6 mb-4">
                     <div class="footer-links">
                         <h4>Quick Links</h4>
                         <ul>
@@ -1581,7 +2159,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 mb-4">
                     <div class="footer-links">
                         <h4>Our Services</h4>
                         <ul>
@@ -1595,7 +2173,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 mb-4">
                     <div class="footer-newsletter">
                         <h4>Newsletter</h4>
                         <p>Subscribe to receive updates on new services and architectural insights.</p>
@@ -1603,14 +2181,15 @@
                             <input type="email" placeholder="Your Email" required>
                             <button type="submit"><i class="fas fa-paper-plane"></i></button>
                         </form>
-                        <p class="small">We respect your privacy. Unsubscribe at any time.</p>
+                        <p class="small mt-3">We respect your privacy. Unsubscribe at any time.</p>
                     </div>
                 </div>
             </div>
 
             <div class="copyright">
                 <p>&copy; <span id="currentYear"></span> JustAsk Architecture. All Rights Reserved. |
-                    Designed with <i class="fas fa-heart" style="color: #E74C3C;"></i></p>
+                    <i class="fas fa-heart" style="color: #fff;"></i> Designed with Afrath Farook
+                </p>
             </div>
         </div>
     </footer>
@@ -1639,8 +2218,9 @@
     <script>
         // Initialize AOS
         AOS.init({
-            duration: 1000,
-            once: true
+            duration: 1200,
+            once: true,
+            offset: 100
         });
 
         // Navbar scroll effect
@@ -1670,13 +2250,13 @@
                 var filter = $(this).data('filter');
 
                 if (filter === 'all') {
-                    $('.portfolio-item').fadeIn(300);
+                    $('.portfolio-item').fadeIn(400);
                 } else {
                     $('.portfolio-item').each(function () {
                         if ($(this).data('category') === filter) {
-                            $(this).fadeIn(300);
+                            $(this).fadeIn(400);
                         } else {
-                            $(this).fadeOut(300);
+                            $(this).fadeOut(400);
                         }
                     });
                 }
@@ -1691,7 +2271,8 @@
                 nav: false,
                 dots: true,
                 autoplay: true,
-                autoplayTimeout: 5000,
+                autoplayTimeout: 6000,
+                smartSpeed: 800,
                 responsive: {
                     0: {
                         items: 1
@@ -1706,37 +2287,11 @@
             });
         });
 
-        // Partner slider
-        $(document).ready(function () {
-            $('.partner-slider').owlCarousel({
-                loop: true,
-                margin: 30,
-                nav: false,
-                dots: false,
-                autoplay: true,
-                autoplayTimeout: 3000,
-                responsive: {
-                    0: {
-                        items: 2
-                    },
-                    576: {
-                        items: 3
-                    },
-                    768: {
-                        items: 4
-                    },
-                    992: {
-                        items: 6
-                    }
-                }
-            });
-        });
-
         // Counter animation
         $(document).ready(function () {
             $('.stat-number').counterUp({
                 delay: 10,
-                time: 2000
+                time: 2500
             });
         });
 
@@ -1744,16 +2299,25 @@
         $(document).ready(function () {
             $('#contactForm').submit(function (e) {
                 e.preventDefault();
-                alert('Thank you for your message! We will contact you soon.');
+                // Using SweetAlert2 for better alerts
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Thank you for your message! We will contact you soon.',
+                    icon: 'success',
+                    confirmButtonColor: '#FF3B30'
+                });
                 this.reset();
             });
-        });
 
-        // Newsletter form
-        $(document).ready(function () {
+            // Newsletter form
             $('.newsletter-form').submit(function (e) {
                 e.preventDefault();
-                alert('Thank you for subscribing to our newsletter!');
+                Swal.fire({
+                    title: 'Subscribed!',
+                    text: 'Thank you for subscribing to our newsletter!',
+                    icon: 'success',
+                    confirmButtonColor: '#FF3B30'
+                });
                 this.reset();
             });
         });
@@ -1771,15 +2335,16 @@
 
                     $('html, body').animate({
                         scrollTop: $(hash).offset().top - 80
-                    }, 800);
+                    }, 1000, 'easeInOutExpo');
                 }
             });
         });
 
         // Lightbox initialization
         lightbox.option({
-            'resizeDuration': 200,
-            'wrapAround': true
+            'resizeDuration': 300,
+            'wrapAround': true,
+            'albumLabel': 'Image %1 of %2'
         });
 
         // Theme toggle functionality
@@ -1803,51 +2368,89 @@
             }
         });
 
-        // Dark mode styles
+        // Add SweetAlert for better alerts
+        const sweetAlertScript = document.createElement('script');
+        sweetAlertScript.src = 'https://cdn.jsdelivr.net/npm/sweetalert2@11';
+        document.head.appendChild(sweetAlertScript);
+
+        // Dark mode styles with Apple Red accents
         $(document).ready(function () {
             const darkModeStyles = `
                 body.dark-mode {
-                    background-color: #121212;
-                    color: #e0e0e0;
+                    background-color: #0A0A14;
+                    color: #E0E0E0;
+                }
+                
+                body.dark-mode::before {
+                    background-image: 
+                        radial-gradient(circle at 20% 80%, rgba(255, 59, 48, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
                 }
                 
                 body.dark-mode .navbar {
-                    background-color: rgba(26, 26, 26, 0.95);
+                    background-color: rgba(10, 10, 20, 0.95);
+                    border-bottom: 1px solid rgba(255, 59, 48, 0.2);
                 }
                 
-                body.dark-mode .section-title h2,
+                body.dark-mode .navbar-brand,
                 body.dark-mode .nav-link,
-                body.dark-mode .navbar-brand {
-                    color: #e0e0e0 !important;
+                body.dark-mode .section-title h2 {
+                    color: #E0E0E0 !important;
                 }
                 
                 body.dark-mode .service-card,
                 body.dark-mode .process-step,
                 body.dark-mode .team-card,
                 body.dark-mode .contact-info,
-                body.dark-mode .contact-form {
-                    background-color: #1e1e1e;
-                    color: #e0e0e0;
+                body.dark-mode .contact-form,
+                body.dark-mode .feature-item {
+                    background-color: #1A1A2E;
+                    color: #E0E0E0;
+                    border-color: rgba(255, 59, 48, 0.3);
                 }
                 
-                body.dark-mode .btn-secondary {
-                    border-color: #e0e0e0;
-                    color: #e0e0e0;
-                }
-                
-                body.dark-mode .btn-secondary:hover {
-                    background-color: #e0e0e0;
-                    color: #121212;
+                body.dark-mode .form-control {
+                    background-color: #0A0A14;
+                    border-color: rgba(255, 59, 48, 0.3);
+                    color: #E0E0E0;
                 }
                 
                 body.dark-mode .footer-section {
-                    background-color: #0a0a0a;
+                    background: linear-gradient(135deg, #0A0A14 0%, #1A1A2E 100%);
+                }
+                
+                body.dark-mode .btn-secondary {
+                    border-color: #FF6257;
+                    color: #FF6257;
+                }
+                
+                body.dark-mode .btn-secondary:hover {
+                    background-color: #FF6257;
+                    color: #1A1A2E;
+                }
+                
+                body.dark-mode .service-features li::before {
+                    color: #FF6257;
+                }
+                
+                body.dark-mode .feature-item {
+                    border-left-color: #FF6257;
+                }
+                
+                body.dark-mode .contact-item {
+                    border-left-color: #FF6257;
                 }
             `;
 
             const styleSheet = document.createElement('style');
             styleSheet.textContent = darkModeStyles;
             document.head.appendChild(styleSheet);
+        });
+
+        // Parallax effect for hero section
+        $(window).scroll(function () {
+            var scrolled = $(this).scrollTop();
+            $('.hero-section').css('background-position-y', -(scrolled * 0.5) + 'px');
         });
     </script>
 </body>

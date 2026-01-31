@@ -739,13 +739,77 @@
 
         /* Apple Red Testimonials */
         .testimonials-section {
-            background-color: #000000;
+            background: linear-gradient(180deg, #800000 0%, #000000 100%) !important;
             position: relative;
+            padding-top: 100px;
+            padding-bottom: 100px;
         }
 
         .testimonials-section .section-title h2,
         .testimonials-section .section-title p {
             color: white;
+        }
+
+        /* Testimonial Cards Premium Styling */
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            color: white;
+            margin: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+            font-style: italic;
+            opacity: 0.9;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+        }
+
+        .author-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--apple-red);
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info h5 {
+            color: white;
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .author-info p {
+            color: var(--apple-red);
+            margin: 0;
+            font-size: 0.85rem;
         }
 
         /* Apple Red Team Section - All Round Images */

@@ -65,6 +65,11 @@
             --apple-red-subtle: linear-gradient(135deg, #FF3B30 10%, #FF6257 100%);
         }
 
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
             color: #333;
@@ -1390,48 +1395,7 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
-        /* Apple Red Theme Toggle */
-        .theme-toggle {
-            background: var(--silver);
-            border: 2px solid var(--apple-red);
-            color: var(--apple-red);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
-            margin-right: 20px;
-            font-size: 1.3rem;
-            position: relative;
-            overflow: hidden;
-        }
 
-        .theme-toggle::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--apple-red-gradient);
-            opacity: 0;
-            transition: var(--transition);
-            z-index: -1;
-            border-radius: 50%;
-        }
-
-        .theme-toggle:hover::before {
-            opacity: 1;
-        }
-
-        .theme-toggle:hover {
-            color: white;
-            border-color: transparent;
-            transform: rotate(180deg);
-        }
 
         /* Responsive Design */
         @media (max-width: 1400px) {
@@ -1576,9 +1540,7 @@
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
-                <button id="themeToggle" class="theme-toggle">
-                    <i class="fas fa-moon"></i>
-                </button>
+
                 <a href="#contact" class="btn btn-primary ms-lg-3">Get Quote</a>
             </div>
         </div>
@@ -1915,12 +1877,14 @@
                     </div>
                     <div class="testimonial-author">
                         <div class="author-img">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
-                                alt="Michael Rodriguez">
+                            <a href="img/AFRATH.jpg" data-lightbox="testimonials"
+                                data-title="Afrath Farook | CEO and Founder">
+                                <img src="img/AFRATH.jpg" alt="Afrath Farook" style="cursor: pointer;">
+                            </a>
                         </div>
                         <div class="author-info">
-                            <h5>Michael Rodriguez</h5>
-                            <p>Home Owner, Trincomalee</p>
+                            <h5>Afrath Farook</h5>
+                            <p>CEO and Founder of AIM Tech, Trincomalee, Kinniya</p>
                         </div>
                     </div>
                 </div>
@@ -1934,12 +1898,13 @@
                     </div>
                     <div class="testimonial-author">
                         <div class="author-img">
-                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=200&q=80"
-                                alt="Sarah Johnson">
+                            <a href="img/Nafri.jpeg" data-lightbox="testimonials" data-title="Nafri | Auditor">
+                                <img src="img/Nafri.jpeg" alt="Nafri" style="cursor: pointer;">
+                            </a>
                         </div>
                         <div class="author-info">
-                            <h5>Sarah Johnson</h5>
-                            <p>Property Developer, Colombo</p>
+                            <h5>Nafri</h5>
+                            <p>Auditor, Trincomalee, Kinniya</p>
                         </div>
                     </div>
                 </div>
@@ -1947,18 +1912,20 @@
                 <!-- Testimonial 3 -->
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        "The interior design for our restaurant came out beautifully. The team was professional,
+                        "The interior design for our Computer Shop came out beautifully. The team was professional,
                         responsive, and helped us with material selection. We'll definitely be using their services for
                         our next project."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-img">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80"
-                                alt="David Chen">
+                            <a href="img/imthiyas.jpeg" data-lightbox="testimonials"
+                                data-title="Imthiyas Azan | CEO of GBase Technologies">
+                                <img src="img/imthiyas.jpeg" alt="Imthiyas Azan" style="cursor: pointer;">
+                            </a>
                         </div>
                         <div class="author-info">
-                            <h5>David Chen</h5>
-                            <p>Restaurant Owner, Kandy</p>
+                            <h5>Imthiyas Azan</h5>
+                            <p>CEO of GBase Technologies, Trincomalee, Kinniya</p>
                         </div>
                     </div>
                 </div>
@@ -1976,17 +1943,22 @@
 
             <div class="row justify-content-center">
                 <!-- CEO - Large Round Image -->
-                <div class="col-lg-4 col-md-6 mb-5" data-aos="fade-up" data-aos-delay="100">
-                    <div class="team-card"
-                        style="border: 3px solid transparent; background: linear-gradient(white, white) padding-box, var(--apple-red-gradient) border-box;">
-                        <div class="team-img" style="width: 220px; height: 220px;">
-                            <img src="img/picture (1).jpeg" alt="Mohamed Saththir - CEO">
+                <div class="col-lg-12 mb-5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-card mx-auto"
+                        style="max-width: 400px; border: 3px solid transparent; background: linear-gradient(white, white) padding-box, var(--apple-red-gradient) border-box;">
+                        <div class="team-img"
+                            style="width: 220px; height: 220px; border-radius: 50%; overflow: hidden; margin: 20px auto;">
+                            <a href="img/picture (1).jpeg" data-lightbox="team"
+                                data-title="Mohamed Saththir | CEO & Principal Architect">
+                                <img src="img/picture (1).jpeg" alt="Mohamed Saththir - CEO"
+                                    style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;">
+                            </a>
                         </div>
-                        <div class="team-info">
+                        <div class="team-info text-center">
                             <h4>Mohamed Saththir</h4>
-                            <p style="color: var(--apple-red);">CEO & Principal Architect</p>
+                            <p style="color: var(--apple-red); font-weight: bold;">CEO & Principal Architect</p>
                             <p class="small">HND Civil Engineering • AutoCAD • BIM</p>
-                            <div class="team-social">
+                            <div class="team-social justify-content-center">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
                                 <a href="#"><i class="fab fa-instagram"></i></a>
@@ -1994,12 +1966,18 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="row justify-content-center">
 
                 <!-- Team Member 2 -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="team-card">
                         <div class="team-img">
-                            <img src="img/picture (8).jpeg" alt="M.M.Rilan Ahamed">
+                            <a href="img/picture (8).jpeg" data-lightbox="team"
+                                data-title="M.M.Rilan Ahamed | Technical Officer">
+                                <img src="img/picture (8).jpeg" alt="M.M.Rilan Ahamed" style="cursor: pointer;">
+                            </a>
                         </div>
                         <div class="team-info">
                             <h4>M.M.Rilan Ahamed</h4>
@@ -2018,7 +1996,10 @@
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="team-card">
                         <div class="team-img">
-                            <img src="img/picture (9).jpeg" alt="M.H.M.Musthak">
+                            <a href="img/picture (9).jpeg" data-lightbox="team"
+                                data-title="M.H.M.Musthak | Engineering Draughtsman">
+                                <img src="img/picture (9).jpeg" alt="M.H.M.Musthak" style="cursor: pointer;">
+                            </a>
                         </div>
                         <div class="team-info">
                             <h4>M.H.M.Musthak</h4>
@@ -2037,7 +2018,10 @@
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
                     <div class="team-card">
                         <div class="team-img">
-                            <img src="img/picture (10).jpeg" alt="M.S.Luthfi Ahamed">
+                            <a href="img/picture (10).jpeg" data-lightbox="team"
+                                data-title="M.S.Luthfi Ahamed | 3D Modeler & Architectural Draughtsman">
+                                <img src="img/picture (10).jpeg" alt="M.S.Luthfi Ahamed" style="cursor: pointer;">
+                            </a>
                         </div>
                         <div class="team-info">
                             <h4>M.S.Luthfi Ahamed</h4>
@@ -2056,7 +2040,9 @@
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
                     <div class="team-card">
                         <div class="team-img">
-                            <img src="img/picture 11.jpeg" alt="M.N.M.Ifthisam">
+                            <a href="img/picture 11.jpeg" data-lightbox="team" data-title="M.N.M.Ifthisam | 3D Modeler">
+                                <img src="img/picture 11.jpeg" alt="M.N.M.Ifthisam" style="cursor: pointer;">
+                            </a>
                         </div>
                         <div class="team-info">
                             <h4>M.N.M.Ifthisam</h4>
@@ -2398,8 +2384,11 @@
                     const hash = this.hash;
 
                     $('html, body').animate({
-                        scrollTop: $(hash).offset().top - 80
-                    }, 1000, 'easeInOutExpo');
+                        scrollTop: $(hash).offset().top - 100
+                    }, 800, function () {
+                        // Add hash to URL logic if needed, but keeping simple for now to match style
+                        window.location.hash = hash;
+                    });
                 }
             });
         });
@@ -2411,105 +2400,14 @@
             'albumLabel': 'Image %1 of %2'
         });
 
-        // Theme toggle functionality
-        $(document).ready(function () {
-            $('#themeToggle').click(function () {
-                $('body').toggleClass('dark-mode');
-                const icon = $(this).find('i');
-                if ($('body').hasClass('dark-mode')) {
-                    icon.removeClass('fa-moon').addClass('fa-sun');
-                    localStorage.setItem('theme', 'dark');
-                } else {
-                    icon.removeClass('fa-sun').addClass('fa-moon');
-                    localStorage.setItem('theme', 'light');
-                }
-            });
 
-            // Check for saved theme preference
-            if (localStorage.getItem('theme') === 'dark') {
-                $('body').addClass('dark-mode');
-                $('#themeToggle i').removeClass('fa-moon').addClass('fa-sun');
-            }
-        });
 
         // Add SweetAlert for better alerts
         const sweetAlertScript = document.createElement('script');
         sweetAlertScript.src = 'https://cdn.jsdelivr.net/npm/sweetalert2@11';
         document.head.appendChild(sweetAlertScript);
 
-        // Dark mode styles with Apple Red accents
-        $(document).ready(function () {
-            const darkModeStyles = `
-                body.dark-mode {
-                    background-color: #0A0A14;
-                    color: #E0E0E0;
-                }
-                
-                body.dark-mode::before {
-                    background-image: 
-                        radial-gradient(circle at 20% 80%, rgba(255, 59, 48, 0.05) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
-                }
-                
-                body.dark-mode .navbar {
-                    background-color: rgba(10, 10, 20, 0.95);
-                    border-bottom: 1px solid rgba(255, 59, 48, 0.2);
-                }
-                
-                body.dark-mode .navbar-brand,
-                body.dark-mode .nav-link,
-                body.dark-mode .section-title h2 {
-                    color: #E0E0E0 !important;
-                }
-                
-                body.dark-mode .service-card,
-                body.dark-mode .process-step,
-                body.dark-mode .team-card,
-                body.dark-mode .contact-info,
-                body.dark-mode .contact-form,
-                body.dark-mode .feature-item {
-                    background-color: #1A1A2E;
-                    color: #E0E0E0;
-                    border-color: rgba(255, 59, 48, 0.3);
-                }
-                
-                body.dark-mode .form-control {
-                    background-color: #0A0A14;
-                    border-color: rgba(255, 59, 48, 0.3);
-                    color: #E0E0E0;
-                }
-                
-                body.dark-mode .footer-section {
-                    background: linear-gradient(135deg, #0A0A14 0%, #1A1A2E 100%);
-                }
-                
-                body.dark-mode .btn-secondary {
-                    border-color: #FF6257;
-                    color: #FF6257;
-                }
-                
-                body.dark-mode .btn-secondary:hover {
-                    background-color: #FF6257;
-                    color: #1A1A2E;
-                }
-                
-                body.dark-mode .service-features li::before {
-                    color: #FF6257;
-                }
-                
-                body.dark-mode .feature-item {
-                    border-left-color: #FF6257;
-                }
-                
-                body.dark-mode .contact-item {
-                    border-left-color: #FF6257;
-                }
-            `;
 
-            const styleSheet = document.createElement('style');
-            styleSheet.textContent = darkModeStyles;
-            document.head.appendChild(styleSheet);
-        });
 
         // Parallax effect for hero section
         $(window).scroll(function () {

@@ -721,6 +721,7 @@ a {
     padding: 2px;
     background: var(--gradient-red);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     opacity: 0;
@@ -1171,6 +1172,7 @@ a {
     padding: 3px;
     background: var(--gradient-red);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     opacity: 0;
@@ -1392,7 +1394,7 @@ textarea.form-control {
 
 /* ===== Premium Footer ===== */
 .footer-section {
-    background: linear-gradient(135deg, #1c1c1c 0%, #000000 100%);
+    background: linear-gradient(to right, #800000 50%, #000000 50%);
     color: #e0e0e0;
     padding: 100px 0 0;
     position: relative;

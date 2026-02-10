@@ -335,7 +335,7 @@ $('.back-to-top').click(function (e) {
     return false;
 });
 
-// Premium Form submission with loading animation
+// Premium Form submission with Formspree Integration
 $('#contactForm').submit(function (e) {
     e.preventDefault();
 
@@ -346,27 +346,40 @@ $('#contactForm').submit(function (e) {
     // Show loading animation
     submitBtn.prop('disabled', true).html('<i class="fas fa-spinner fa-spin"></i> Sending...');
 
-    // Simulate API call with animation
-    setTimeout(() => {
-        // Reset button
-        submitBtn.prop('disabled', false).html(originalText);
+    // Send data to Formspree
+    $.ajax({
+        url: form.attr('action'),
+        method: 'POST',
+        data: form.serialize(),
+        dataType: 'json',
+        success: function () {
+            // Reset button
+            submitBtn.prop('disabled', false).html(originalText);
 
-        // Show success toast
-        showLuxuryToast('Success!', 'Thank you for your message! We will contact you soon.', 'success', 'fa-check-circle');
+            // Show success toast
+            showLuxuryToast('Success!', 'Thank you for your message! We will contact you soon.', 'success', 'fa-check-circle');
 
-        // Form reset animation
-        anime({
-            targets: form.find('.form-control'),
-            translateY: [0, -10, 0],
-            opacity: [1, 0.5, 1],
-            duration: 600,
-            easing: 'easeInOutSine',
-            delay: anime.stagger(100),
-            complete: function () {
-                form[0].reset();
-            }
-        });
-    }, 2000);
+            // Form reset animation
+            anime({
+                targets: form.find('.form-control'),
+                translateY: [0, -10, 0],
+                opacity: [1, 0.5, 1],
+                duration: 600,
+                easing: 'easeInOutSine',
+                delay: anime.stagger(100),
+                complete: function () {
+                    form[0].reset();
+                }
+            });
+        },
+        error: function () {
+            // Reset button
+            submitBtn.prop('disabled', false).html(originalText);
+
+            // Show error toast
+            showLuxuryToast('Error!', 'Oops! There was a problem sending your message. Please try again.', 'error', 'fa-exclamation-circle');
+        }
+    });
 });
 
 // Newsletter form with premium effects
